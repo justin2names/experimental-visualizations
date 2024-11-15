@@ -14,9 +14,9 @@
         "description": "Sunburst Visualization",
         "iconUrl": "https://storage.cloud.google.com/dscv/public/images/suburst-icon.svg",
         "resource": {
-            "js": "https://raw.githubusercontent.com/justin2names/experimental-visualizations/Updates-01/viz/sunburst-drilldown/sunburst/sunburst.js",
-            "config": "https://raw.githubusercontent.com/justin2names/experimental-visualizations/Updates-01/viz/sunburst-drilldown/webpack.config.js",
-            "css": "https://raw.githubusercontent.com/justin2names/experimental-visualizations/Updates-01/viz/sunburst-drilldown/sunburst/src/d3-sunburst.scss"
+            "js": "https://raw.githubusercontent.com/justin2names/experimental-visualizations/viz/sunburst-drilldown/sunburst/sunburst.js",
+            "config": "https://raw.githubusercontent.com/justin2names/experimental-visualizations/viz/sunburst-drilldown/webpack.config.js",
+            "css": "https://raw.githubusercontent.com/justin2names/experimental-visualizations/viz/sunburst-drilldown/sunburst/src/d3-sunburst.scss"
         }
       }
     ]
