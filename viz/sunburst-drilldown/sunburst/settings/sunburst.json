@@ -25,98 +25,127 @@
             ]
         }
     ],
-    "style": [
-        {
-            "id": "instance",
-            "label": "For multiple instances in same report",
-            "elements": [
-                {
-                    "id": "instanceID",
-                    "label": "Unique Component ID",
-                    "type": "INTERVAL",
-                    "defaultValue": "1"
-                }
-            ]
-        },
-        {
-            "id": "legend",
-            "label": "Legend",
-            "elements": [
-                {
-                    "id": "isLegend",
-                    "label": "Show Legend",
-                    "type": "CHECKBOX",
-                    "defaultValue": "false"
-                },
-                {
-                    "id": "fontColor",
-                    "label": "Font Color",
-                    "type": "FONT_COLOR",
-                    "defaultValue": "#000000"
-                }
-            ]
-        },
-        {
-            "id": "colors",
-            "label": "Colour Scheme",
-            "elements": [
-                {
-                    "id": "arcColors",
-                    "label": "Choose a Color Scheme",
-                    "type": "SELECT_SINGLE",
-                    "defaultValue": "interpolateViridis",
-                    "options": [
-                        {
-                            "label": "Viridis 'perceptually-uniform' Colors",
-                            "value": "interpolateViridis"
-                        },
-                        {
-                            "label": "Rainbow Colors",
-                            "value": "interpolateRainbow"
-                        },
-                        {
-                            "label": "Cubehelix Colors",
-                            "value": "interpolateCubehelixDefault"
-                        },
-                        {
-                            "label": "Inferno Colors",
-                            "value": "interpolateInferno"
-                        },
-                        {
-                            "label": "Plasma Colors",
-                            "value": "interpolatePlasma"
-                        },
-                        {
-                            "label": "Warm Colors",
-                            "value": "interpolateWarm"
-                        },
-                        {
-                            "label": "Cool Colors",
-                            "value": "interpolateCool"
-                        },
-                        {
-                            "label": "Spectral",
-                            "value": "interpolateSpectral"
-                        },
-                        {
-                            "label": "Grey",
-                            "value": "interpolateGreys"
-                        },
-                        {
-                            "label": "Orange",
-                            "value": "schemeOranges"
-                        }
-                    ]
-                },
-                {
-                    "id": "colorSchemeReversed",
-                    "label": "Reverse Color Scheme",
-                    "type": "CHECKBOX",
-                    "defaultValue": "false"
-                }
-            ]
-        }
-    ],
+    
+        "style": [
+            {
+                "id": "instance",
+                "label": "For multiple instances in same report",
+                "elements": [
+                    {
+                        "id": "instanceID",
+                        "label": "Unique Component ID",
+                        "type": "INTERVAL",
+                        "defaultValue": "1"
+                    }
+                ]
+            },
+            {
+                "id": "legend",
+                "label": "Legend",
+                "elements": [
+                    {
+                        "id": "isLegend",
+                        "label": "Show Legend",
+                        "type": "CHECKBOX",
+                        "defaultValue": "false"
+                    },
+                    {
+                        "id": "fontColor",
+                        "label": "Font Color",
+                        "type": "FONT_COLOR",
+                        "defaultValue": "#000000"
+                    }
+                ]
+            },
+            {
+                "id": "colors",
+                "label": "Colour Scheme",
+                "elements": [
+                    {
+                        "id": "arcColors",
+                        "label": "Choose a Color Scheme",
+                        "type": "SELECT_SINGLE",
+                        "defaultValue": "interpolateViridis",
+                        "options": [
+                            {
+                                "label": "Viridis 'perceptually-uniform' Colors",
+                                "value": "interpolateViridis"
+                            },
+                            {
+                                "label": "Rainbow Colors",
+                                "value": "interpolateRainbow"
+                            },
+                            {
+                                "label": "Cubehelix Colors",
+                                "value": "interpolateCubehelixDefault"
+                            },
+                            {
+                                "label": "Inferno Colors",
+                                "value": "interpolateInferno"
+                            },
+                            {
+                                "label": "Plasma Colors",
+                                "value": "interpolatePlasma"
+                            },
+                            {
+                                "label": "Warm Colors",
+                                "value": "interpolateWarm"
+                            },
+                            {
+                                "label": "Cool Colors",
+                                "value": "interpolateCool"
+                            },
+                            {
+                                "label": "Spectral",
+                                "value": "interpolateSpectral"
+                            },
+                            {
+                                "label": "Grey",
+                                "value": "interpolateGreys"
+                            },
+                            {
+                                "label": "Orange",
+                                "value": "schemeOranges"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "colorSchemeReversed",
+                        "label": "Reverse Color Scheme",
+                        "type": "CHECKBOX",
+                        "defaultValue": "false"
+                    }
+                ]
+            },
+            {
+                "id": "labels",
+                "label": "Labels",
+                "elements": [
+                    {
+                        "id": "showLabels",
+                        "label": "Show Labels",
+                        "type": "CHECKBOX",
+                        "defaultValue": true
+                    },
+                    {
+                        "id": "labelFontSize",
+                        "label": "Label Font Size",
+                        "type": "NUMBER",
+                        "defaultValue": 12,
+                        "minValue": 8,
+                        "maxValue": 24
+                    },
+                    {
+                        "id": "labelColor",
+                        "label": "Label Color",
+                        "type": "FONT_COLOR",
+                        "defaultValue": "#000000"
+                    }
+                ]
+            }
+        ]
+    
+    ,
     "interactions": [
         {
           "id": "sunburstFilter",

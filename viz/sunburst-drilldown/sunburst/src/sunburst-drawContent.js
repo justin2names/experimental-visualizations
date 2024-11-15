@@ -41,14 +41,35 @@ export function drawContent() {
     })
     .on('mouseout', hideToolTip);
 
+  // Add labels to the segments
+  const fontSize = ctx.data.style.labelFontSize || 12; // Default font size
+  const fontColor = ctx.data.style.labelColor || '#000000'; // Default font color
+  const showLabels = ctx.data.style.showLabels !== false; // Toggle labels (default: true)
+
+  if (showLabels) {
+    this.g
+      .selectAll('.sunburst-label')
+      .data(root.descendants())
+      .enter()
+      .append('text')
+      .attr('class', 'sunburst-label')
+      .attr('transform', d => {
+        const x = Math.cos(d.angle - Math.PI / 2) * (d.radius + 10); // Radial label positioning
+        const y = Math.sin(d.angle - Math.PI / 2) * (d.radius + 10);
+        return `translate(${x}, ${y})`;
+      })
+      .attr('text-anchor', 'middle') // Center the text
+      .style('font-size', `${fontSize}px`)
+      .style('fill', fontColor)
+      .text(d => (d.x1 - d.x0 > 0.03 ? d.data.name : '')); // Show label only for segments > 3% of the circle
+  }
+
   paths
     .filter(d => d.children)
     .style('cursor', 'pointer')
     .on('click', d => {
-      // will update local storage
       manageState(d);
       if (ctx.filterEnabled == false) {
-        // enabled filter will refresh the viz
         changeRoot(d, 0);
       } else {
         const target = getTarget(ctx, d);
